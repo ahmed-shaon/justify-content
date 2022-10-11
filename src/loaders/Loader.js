@@ -14,10 +14,7 @@ export const routerLoader = () => {
             children: [
                 {
                     path:'/',
-                    element:<Home />
-                },
-                {
-                    path:'/home',
+                    loader: async () => await fetch('https://openapi.programming-hero.com/api/quiz'),
                     element:<Home />
                 },
                 {
