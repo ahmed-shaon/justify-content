@@ -9,9 +9,9 @@ const Option = ({ option, question, correctAnswer }) => {
     const handleChange = (value) => {
         setRadio(value);
         // setRadio(e.target.value)
-        console.log(value);
+        // console.log(value);
         if (value === correctAnswer) {
-            console.log('right')
+            // console.log('right')
             toast.success(' Answer is correct!', {
                 position: "top-center",
                 autoClose: 500,
@@ -24,7 +24,7 @@ const Option = ({ option, question, correctAnswer }) => {
             });
         }
         else {
-            console.log('wrong')
+            // console.log('wrong')
             toast.error('Wrong Answer!', {
                 position: "top-center",
                 autoClose: 500,
