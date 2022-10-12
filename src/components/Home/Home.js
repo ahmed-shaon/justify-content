@@ -5,7 +5,6 @@ import Course from '../Course/Course';
 
 const Home = () => {
     const { data } = useLoaderData();
-    console.log(data);
     return (
         <div className='mx-24 my-12 relative'>
             <img className='w-4/5 mx-auto opacity-90 rounded-lg' src={quiz} alt='' />

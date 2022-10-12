@@ -1,7 +1,9 @@
 import { createBrowserRouter } from "react-router-dom"
 import About from "../components/About/About";
 import Blog from "../components/Blog/Blog";
+import Course from "../components/Course/Course";
 import Home from "../components/Home/Home";
+import Quiz from "../components/Quiz/Quiz";
 import Statistics from "../components/Statistics/Statistics";
 import { Main } from "../layouts/Main"
 
@@ -18,6 +20,11 @@ export const routerLoader = () => {
                     element:<Home />
                 },
                 {
+                    path:'/home',
+                    loader: async () => await fetch('https://openapi.programming-hero.com/api/quiz'),
+                    element:<Home />
+                },
+                {
                     path:'statistics',
                     element:<Statistics />
                 },
@@ -28,6 +35,11 @@ export const routerLoader = () => {
                 {
                     path:'about',
                     element:<About />
+                },
+                {
+                    path:'/home/:courseId',
+                    loader: async ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.courseId}`),
+                    element:<Quiz />
                 }
             ]
         }
