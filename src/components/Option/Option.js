@@ -48,7 +48,9 @@ const Option = ({ option, question, correctAnswer }) => {
                 checked={radio === option}
                 onChange={() => handleChange(option)}
             />{option}</label>
-            <ToastContainer/>
+            <div>
+                <ToastContainer />
+            </div>
         </div>
     );
 };

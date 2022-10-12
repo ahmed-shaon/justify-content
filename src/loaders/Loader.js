@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom"
 import About from "../components/About/About";
 import Blog from "../components/Blog/Blog";
 import Course from "../components/Course/Course";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Home from "../components/Home/Home";
 import Quiz from "../components/Quiz/Quiz";
 import Statistics from "../components/Statistics/Statistics";
@@ -14,6 +15,7 @@ export const routerLoader = () => {
         {
             path:'/',
             element:<Main />,
+            errorElement:<ErrorPage/>,
             children: [
                 {
                     path:'/',
