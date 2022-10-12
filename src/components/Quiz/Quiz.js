@@ -8,9 +8,10 @@ const Quiz = () => {
     return (
         <div className='mx-auto my-20 border-2'>
             {
-                questions.map(question => <Question 
+                questions.map((question, index) => <Question 
                 key={question.id} 
-                questionObj={question}/>)
+                questionObj={question}
+                index={index}/>)
             }
         </div>
     );
